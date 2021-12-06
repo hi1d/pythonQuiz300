@@ -77,5 +77,5 @@ print(a, b, c)
 
 # (2, 4, 6, 8 ... 98)
 
-number = tuple(range(2,100,2))
+number = tuple(range(2, 100, 2))
 print(number)
