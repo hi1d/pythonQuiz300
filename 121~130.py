@@ -7,6 +7,7 @@
 # 만약 소문자일 경우 True, 대문자일 경우 False를 반환합니다.
 # 힌트-2 : upper() 함수는 대문자로, lower() 함수는 소문자로 변경합니다.
 
+import requests
 # str_one = input()
 # if str_one.islower() is True:
 #     str_one = str_one.upper()
@@ -140,7 +141,7 @@
 # print(num)
 # if num == 1 or num == 3:
 #     print("남자")
-# else:
+# elif num == 2 or num == 4:
 #     print("여자")
 
 # 128
@@ -196,7 +197,6 @@
 # 130
 # 아래 코드는 비트코인의 가격 정보를 딕셔너리로 가져오는 코드이다.
 
-import requests
 btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
 # btc 딕셔너리 안에는 시가, 종가, 최고가, 최저가 등이 저장되어 있다.
 # 최고가와 최저가의 차이를 변동폭으로 정의할 때 (시가 + 변동폭)이 최고가 보다 높을 경우
@@ -207,6 +207,7 @@ btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
 # closing_price	최근 24시간 내 마지막 거래금액
 # min_price	    최근 24시간 내 최저 거래금액
 # max_price	    최근 24시간 내 최고 거래금액
+
 max_price = int(btc['max_price'])
 price_range = int(btc['max_price']) - int(btc['min_price'])
 open_price = int(btc['opening_price'])
