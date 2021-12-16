@@ -166,4 +166,5 @@ for i in ohlc[1::]:
 sum = 0
 for i in ohlc[1::]:
     sum += i[0]-i[3]
+
 print(sum)
